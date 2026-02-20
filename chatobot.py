@@ -544,6 +544,16 @@ async def load_model_command(update: Update, context: ContextTypes.DEFAULT_TYPE)
     
     else:
         # Con argumentos: cargar el modelo especificado
+
+        # Validar que el nombre de modelo solo contiene caracteres seguros
+        import re
+        if not re.match(r'^[\w\-./]+$', model_name):
+            await update.message.reply_text(
+                "❌ Nombre de modelo no válido.\n"
+                "Solo se permiten letras, números, guiones, puntos y barras."
+            )
+            return
+
         await update.message.reply_text(f"⏳ Cargando modelo `{model_name}`...", parse_mode='Markdown')
         
         try:
@@ -686,6 +696,9 @@ async def exit_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await asyncio.sleep(1)
     
     # Detener la aplicación
+    # Señalar el evento principal para que main() cierre ordenadamente
+    # (en lugar de os._exit(0) que termina de forma brusca sin limpiar)
+    asyncio.get_event_loop().stop()
     os._exit(0)
 
 
