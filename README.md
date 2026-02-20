@@ -59,4 +59,14 @@ The initial release `v0.1` is available on GitHub:
 - Release page: https://github.com/arcopante-maker/chatobot/releases/tag/v0.1
 - Asset: `chatobot-v0.1.zip` (also included in the `dist/` folder of this repository)
 
+The second release `v0.2` is also available:
+
+- Release page: https://github.com/arcopante/chatobot/releases/tag/v0.2
+- Asset: `chatobot-v0.2.zip` (included in the `dist/` folder)
+
+Changelog (v0.2):
+
+- fix: validación de nombre de modelo en `/load` y cierre limpio en `/exit`
+
+
 
