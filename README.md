@@ -56,7 +56,7 @@ See the `LICENSE` file for the full terms.
 Release
 The initial release `v0.1` is available on GitHub:
 
-- Release page: https://github.com/arcopante-maker/chatobot/releases/tag/v0.1
+- Release page: https://github.com/arcopante/chatobot/releases/tag/v0.1
 - Asset: `chatobot-v0.1.zip` (also included in the `dist/` folder of this repository)
 
 The second release `v0.2` is also available:
